@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <br>
+            <h5>ADD EMPLOYEE FORM</h5>
+            <form>
+                <div>
+                    <label>ENTER ID</label>
+                    <input type="text" class="form-control" [(ngModel)]="formData.id" name = "id">
+                </div>
+                <div>
+                    <label>ENTER NAME</label>
+                    <input type="text" class="form-control" [(ngModel)]="formData.name" name = "name">
+                </div>
+                <div>
+                    <label>ENTER AGE</label>
+                    <input type="text" class="form-control" [(ngModel)]="formData.age" name = "age">
+                </div>
+                <button class="btn btn-secondary" (click)="addDetails()">ADD</button>
+            </form>
+        </div>
+    </div>
+</div>

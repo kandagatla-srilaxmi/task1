@@ -1,0 +1,15 @@
+<table>
+    <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+    </tr>
+    <tr *ngFor="let item of emplist">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+    <td><button (click)="editemp(item.id)">EDIT</button></td>
+    <td><button (click)="deleteemp(item.id)">DELETE</button></td>
+    </tr>
+  </table>
+  
