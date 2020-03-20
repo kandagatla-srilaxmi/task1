@@ -8,23 +8,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./emp-details.component.css']
 })
 export class EmpDetailsComponent implements OnInit {
-  public emplist=[];
-  constructor(private empservice:EmpServiceService,private router:Router) { }
-  
-  ngOnInit(): void {
-      this.empservice.getAllDetails().subscribe(data=>this.emplist=data);
-    }
+  public emplist = [];
+  constructor(private empservice: EmpServiceService, private router: Router) { }
 
-deleteemp(id){
-  this.empservice.deleteMethod(id).subscribe(data=>{
-    console.log(data);
-   this.empservice.getAllDetails().subscribe(data=>{
-    this.emplist=data;
-    }) 
-  });
-  alert("deleted");
-}
-editemp(id){
-  this.router.navigate(['/editemployee',id]);
-}
+  ngOnInit(): void {
+    this.empservice.getAllDetails().subscribe(data => this.emplist = data);
+  }
+
+  deleteemp(id) {
+    console.log({ id })
+    this.empservice.deleteMethod(id).subscribe(data => {
+      console.log(data);
+      this.empservice.getAllDetails().subscribe(data => this.emplist = data);
+    });
+    alert("deleted");
+
+  }
+
+  editemp(id) {
+    this.router.navigate(['/editemployee', id]);
+  }
 }

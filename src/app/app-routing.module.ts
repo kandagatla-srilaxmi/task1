@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'empdetails',component:EmpDetailsComponent},
   {path:'emplist',component:EmpListComponent},
   
-  {path:'editemployee',component:EditEmployeeComponent},
+  {path:'editemployee/:id',component:EditEmployeeComponent},
   {path:'addemployee',component:AddEmployeeComponent},
   {path:'**',component:PNFComponent},
 ];

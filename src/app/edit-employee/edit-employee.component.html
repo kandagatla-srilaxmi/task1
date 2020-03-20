@@ -1,1 +1,24 @@
-<p>edit-employee works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <br>
+            <form>
+                <h5>EDIT EMPLOYEE of id = {{id}}</h5>
+                <div>
+                    <label>ENTER NAME</label>
+                    <input type="text" class="form-control" [(ngModel)]="empData.name" name = "name">
+                </div>
+                <div>
+                    <label>ENTER AGE</label>
+                    <input type="text" class="form-control" [(ngModel)]="empData.age" name = "age">
+                </div>
+                <div>
+                    <label>ENTER MOBILENUMBER</label>
+                    <input type="text" class="form-control" [(ngModel)]="empData.num" name = "num">
+                </div>
+                <button class="btn btn-secondary" (click)="edit()">EDIT</button>
+            </form>
+        </div>
+    </div>
+</div>

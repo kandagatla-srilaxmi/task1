@@ -16,6 +16,7 @@ export class AddEmployeeComponent implements OnInit {
     id:null,
     name:null,
     age:null,
+    num:null,
     }
 
   }

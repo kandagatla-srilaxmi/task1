@@ -14,7 +14,11 @@
                 </div>
                 <div>
                     <label>ENTER AGE</label>
-                    <input type="text" class="form-control" [(ngModel)]="formData.age" name = "age">
+                    <input type="number" class="form-control" [(ngModel)]="formData.age" name = "age">
+                </div>
+                <div>
+                    <label>ENTER MOBILE NUM</label>
+                    <input type="number" class="form-control" [(ngModel)]="formData.num" name = "num">
                 </div>
                 <button class="btn btn-secondary" (click)="addDetails()">ADD</button>
             </form>
